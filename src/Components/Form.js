@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
 import { FaPlus } from 'react-icons/fa';
 import { StyledForm, StyledInput  } from '../StyledComponents/StyledForm';
-import { StyledButton } from '../StyledComponents/StyledButton';
+import StyledButton from '../StyledComponents/StyledButton';
 
 
 
-const Form = ({ addTodo }) => {
-  const [value, setValue] = useState('');
+const Form = ({ addNewTodo }) => {
+  const [userTxt, setUserTxt] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!value) { 
+    if (!userTxt) { 
       return; 
     } 
     else { 
-      addTodo(value);
-      setValue('');
+      let currentItem = { text: userTxt, key: Date.now() }
+      addNewTodo(currentItem);
+      setUserTxt('');
     }
   }
 
@@ -25,8 +26,8 @@ const Form = ({ addTodo }) => {
       <StyledInput 
         type='text' 
         placeholder='Add items'
-        value={ value } 
-        onChange={ (e) => setValue(e.target.value) }
+        value={ userTxt } 
+        onChange={ (e) => setUserTxt(e.target.value) }
       />
       <StyledButton>
         <FaPlus size='1.5rem'/>

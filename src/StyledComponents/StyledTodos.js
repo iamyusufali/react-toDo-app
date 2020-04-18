@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { StyledButton } from '../StyledComponents/StyledButton';
+import StyledButton from '../StyledComponents/StyledButton';
 
 
 // Wrapper component

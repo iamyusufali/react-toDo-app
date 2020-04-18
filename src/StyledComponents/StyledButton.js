@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.button` 
+const StyledButton = styled.button` 
   cursor: pointer;
   width: 2.5rem;
   height: 2.5rem;
@@ -10,3 +10,5 @@ export const StyledButton = styled.button`
   outline: none;
   color: #fff;
 `
+
+export default StyledButton;
