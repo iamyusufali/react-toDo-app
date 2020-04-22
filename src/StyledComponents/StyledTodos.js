@@ -5,8 +5,8 @@ import StyledButton from '../StyledComponents/StyledButton';
 // Wrapper component
 export const TodosWrapper = styled.section`
   display: flex;
-  height: 5.5vh;
-  width: 30vw;
+  height: 3rem;
+  width: 35rem;
   margin: auto;
   margin-top: 2rem;
   background-color: #fff;
@@ -14,7 +14,7 @@ export const TodosWrapper = styled.section`
 
 // Span component
 export const TodoItem = styled.span`
-  width: 25vw;
+  width: 32rem;
   margin: .6rem 0 0 1rem;
   font-size: 1.5rem;
   color: #2d3436;
@@ -23,7 +23,7 @@ export const TodoItem = styled.span`
 
 // Button component
 export const TodoButton = styled(StyledButton)`
-  width: 2.5vw;
+  width: 3rem;
   height: 100%;
   background-color: ${({ done, color }) => done === undefined? color : !done? '#2ecc71' : '#f9ca24'};
   border-radius: 0;
