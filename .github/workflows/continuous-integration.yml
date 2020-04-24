@@ -10,10 +10,10 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Install Dependencies
-        run: npm install
+        run: npm
 
       - name: Build
         run: npm build
 
       - name: Test
-        run: npm test --passWithNoTests
+        run: npm test --watchAll=false
