@@ -1,6 +1,12 @@
 name: Continuous Integration
 
-on: [pull_request]
+on: 
+  push:
+    -master
+    -develop
+  pull_request:
+    -master
+    -develop
 
 jobs:
   buildAndTest:
